@@ -11,10 +11,17 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@prisma/client": "^2.13.1",
     "compression": "^1.7.1",
+    "install": "^0.13.0",
     "polka": "next",
+    "postcss": "7",
+    "postcss-flexbugs-fixes": "4",
+    "postcss-loader": "^4.1.0",
+    "postcss-preset-env": "^6.7.0",
     "sirv": "^1.0.0",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.1-compat",
+    "uninstall": "^0.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -22,6 +29,7 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.0.0",
+    "@prisma/cli": "^2.13.1",
     "@rollup/plugin-babel": "^5.0.0",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
@@ -31,12 +39,18 @@
     "@storybook/addon-essentials": "^6.1.11",
     "@storybook/addon-links": "^6.1.11",
     "@storybook/svelte": "^6.1.11",
+    "@testing-library/jest-dom": "^5.11.8",
+    "@testing-library/svelte": "^3.0.3",
+    "autoprefixer": "7",
     "babel-loader": "^8.2.2",
+    "jest": "^26.6.3",
+    "jest-transform-svelte": "^2.1.1",
     "rollup": "^2.3.4",
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
     "sapper": "^0.28.0",
     "svelte": "^3.31.0",
-    "svelte-loader": "^2.13.6"
+    "svelte-loader": "^2.13.6",
+    "svelte-preprocess": "^4.6.1"
   }
 }
