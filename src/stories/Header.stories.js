@@ -1,29 +1,21 @@
-import Header from './Header.svelte';
+import OptionHeader from "./Header.svelte";
 
 export default {
-  title: 'Example/Header',
-  component: Header,
-  argTypes: {
-    onLogin: { action: 'onLogin' },
-    onLogout: { action: 'onLogout' },
-    onCreateAccount: { action: 'onCreateAccount' },
-  },
+  title: "Header",
 };
 
-const Template = ({ onLogin, onLogout, onCreateAccount, ...args }) => ({
-  Component: Header,
-  props: args,
-  on: {
-    login: onLogin,
-    logout: onLogout,
-    createAccount: onCreateAccount,
+export const Navbar = () => ({
+  Component: OptionHeader,
+  props: {
+    Navbar:true,
+    text: "Default Option",
   },
 });
 
-export const LoggedIn = Template.bind({});
-LoggedIn.args = {
-  user: {},
-};
-
-export const LoggedOut = Template.bind({});
-LoggedOut.args = {};
+export const LoginHead = () => ({
+  Component: OptionHeader,
+  props: {
+    LoginHead: true,
+    text: "Correct Option",
+  },
+});

@@ -1,9 +1,13 @@
 <script>
 	import successkid from 'images/successkid.jpg';
+	import Button from "../stories/Button.svelte";
+	import Card from "../stories/Card.svelte";
+	import Header from "../stories/Header.svelte";
+	
 </script>
 
 <style>
-	h1, figure, p {
+	/* h1, figure, p {
 		text-align: center;
 		margin: 0 auto;
 	}
@@ -33,7 +37,7 @@
 		h1 {
 			font-size: 4em;
 		}
-	}
+	} */
 </style>
 
 <svelte:head>
@@ -48,3 +52,10 @@
 </figure>
 
 <p class="text-sm"><strong>Try editing this file (src/routes/index.svelte) to test live reloading</strong></p>
+
+<Button firstColor={true}>test</Button>
+<Card answer={true}></Card>
+<Header Navbar={true}></Header>
+<Header LoginHead={true}></Header>
+
+
