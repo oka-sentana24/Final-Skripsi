@@ -16,7 +16,7 @@
     text-align: center;
     font-size: 15px;
     cursor: pointer;
-    min-width: 100px;
+    width: 100%;
     transition: all 0.3s;
     background-color: #e74a50;
     color: #fff;

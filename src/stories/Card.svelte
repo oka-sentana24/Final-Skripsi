@@ -8,15 +8,15 @@
       margin: 2rem;
       border-radius: 10px;
       min-width: 300px;
-      max-width: 650px;
+      max-width: 850px;
       margin-left: auto;
       margin-right: auto;
       padding: 1.5rem 1rem;
-      background-color: rgba(249, 253, 255, 0.7);
+      background-color: #fff;
       color: #222;
     }
     .Card {
-      box-shadow:  0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: rgba(32, 32, 35, 0.08) 0.25rem 0.5rem 2rem 0px;
     }
   
     @media only screen and (max-width: 600px) {

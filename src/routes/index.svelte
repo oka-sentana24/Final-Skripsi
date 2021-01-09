@@ -1,8 +1,9 @@
 <script>
-	import successkid from 'images/successkid.jpg';
-	import Button from "../stories/Button.svelte";
-	import Card from "../stories/Card.svelte";
-	import Header from "../stories/Header.svelte";
+	// import successkid from 'images/successkid.jpg';
+	// import Button from "../stories/Button.svelte";
+	// import Card from "../stories/Card.svelte";
+	// import Header from "../stories/Header.svelte";
+	// import Login from "../routes/component/_layout";
 	
 </script>
 
@@ -44,7 +45,7 @@
 	<title>Sapper project template</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<!-- <h1>Great success!</h1>
 
 <figure>
 	<img alt="Success Kid" src="{successkid}">
@@ -57,5 +58,6 @@
 <Card answer={true}></Card>
 <Header Navbar={true}></Header>
 <Header LoginHead={true}></Header>
-
+ -->
+ <!-- <Login></Login> -->
 
