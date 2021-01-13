@@ -19,11 +19,3 @@ export const LoginHead = () => ({
     text: "Correct Option",
   },
 });
-
-export const Menubar = () =>({
-  Component: OptionHeader,
-  props:{
-    Menubar:true,
-    text:"Dropdown",
-  }
-});

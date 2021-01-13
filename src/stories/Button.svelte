@@ -1,8 +1,11 @@
 <script>
+  export let text = true;
+
+
   export let option = false;
-  export let firstColor = false;
-  export let secondColor = false;
-  export let thirdColor = false;
+  export let Primary = false;
+  export let Secondary = false;
+  export let Success = false;
   export let canClick = true;
 </script>
 
@@ -16,31 +19,28 @@
     text-align: center;
     font-size: 15px;
     cursor: pointer;
-    width: 100%;
+    min-width: 200px;
+    max-width: 500px;
     transition: all 0.3s;
-    background-color: #e74a50;
+    background-color: #FFF;
+    color: #000;
+    border: 0.75px solid grey;
+  }
+
+  .Primary {
+    background-color:#007bff;
+    color: #fff;
+    width: 100%;
+  }
+  .Secondary{
+    background-color:#6c757d;
     color: #fff;
   }
 
-  .firstColor {
-    background-color:black;
+  .Success{
+    background-color:#28a745;
     color: #fff;
   }
-
-  .secondColor {
-    background-color: #21c0f4;
-    color: #fff;
-  }
-
-  .thirdColor {
-    background-color: #7c7c7c;
-    color: #fff;
-  }
-
-  button:focus {
-    outline: none;
-  }
-
   .btn.canClick:hover {
     background-color: #fb1759;
     transform: translateY(-2px);
@@ -64,9 +64,9 @@
   class="solid btn"
   class:option
   on:click
-  class:firstColor
-  class:secondColor
-  class:thirdColor
+  class:Primary
+  class:Secondary
+  class:Success
   class:canClick>
-  <slot />
+  <slot>{text}</slot>
 </button>

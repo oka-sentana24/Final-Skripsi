@@ -2,20 +2,13 @@
 	import Nav from '../components/Nav.svelte';
 
 	// export let segment;
+	import { onMount } from 'svelte';
+    import { goto } from '@sapper/app';
+    onMount(() => goto('/auth/login'));
 </script>
 
 <style>
-	main {
-		position: relative;
-		/* max-width: 56rem; */
-		background-color: white;
-		padding: 1em;
-		margin: 0 auto;
-		box-sizing: border-box;
-		overflow-x: hidden;
-		overflow-y: hidden;
-		height: max-content;
-	}
+	
 </style>
 
 <!-- <Nav {segment}/> -->

@@ -2,7 +2,6 @@
   import images from './assets/logo.png';
   export let Navbar = false;
   export let LoginHead = false;
-  export let Menubar = false;
 </script>
 
 <style>
@@ -28,29 +27,13 @@
     width: 100%;
   }
   .content-title h4{
-    top: -17px;
+    top: 7px;
     position: relative;
     left: 9px;
   }
-  .menubar{
-    padding: 0;
-    width: 20%;
-  }
-  .menubar li:hover{
-    background-color: black;
-    color: white;
-  }
-  .menubar li{
-    list-style-type: none;
-    padding: 5px;
-  }
-  .content li{
-    padding: 5px 5px 5px 20px;
-  }
-  
 </style>
 
-<div class="main" class:Navbar class:LoginHead class:Menubar>
+<div class="main" class:Navbar class:LoginHead>
   {#if Navbar}
       <div>
         <img class="logo" src={images} alt="gambar">
@@ -64,35 +47,10 @@
           <img class="logo" src={images} alt="gambar">
         </div>
         <div class="content-title">
-            <h4>Smk Negeri 1 Gianyar</h4>
+            <h4><strong>Smk Negeri 1 Gianyar</strong></h4>
         </div>
-      </div>
-    {:else if Menubar}
-      <div class="menubar text-xs">
-        <div>
-          <h4><strong>Menu</strong></h4>
-        </div>
-        <div>
-          <li>DASBOARD</li>
-        </div>
-        <li>MATER DATA</li>
-          <div class="content">
-            <li>Anggota</li>
-            <li>Jurusan</li>
-            <li>Guru</li>
-            <li>Topik</li>
-          </div>
-        <li>USER</li>
-          <div class="content">
-            <li>Admin</li>
-            <li>Teacher</li>
-            <li>Siswa</li>
-          </div>
-        <li>REPORT</li>
       </div>
     {:else}
-      <div>
-        <p>kosong</p>
-      </div>
-    {/if}
+      <p>kosong</p>
+  {/if}
 </div>

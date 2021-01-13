@@ -4,18 +4,17 @@ export default {
   title: "Card",
 };
 
-export const Card = () => ({
+export const Default = () => ({
   Component: OptionCard,
   props: {
-    Card:true,
-    text: "Default Option",
+    text: "Default Card",
   },
 });
 
-export const CardBody = () => ({
+export const CardSide = () => ({
   Component: OptionCard,
   props: {
-    CardBody: true,
-    text: "Correct Option",
+    CardSide:true,
+    text: "Default Option",
   },
 });
