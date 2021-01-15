@@ -3,6 +3,25 @@
     import Images from "../../../static/background.jpg"
     import Button from "../../stories/Button.svelte";
     import Logo from '../../../static/logo.png';
+    import { goto } from '@sapper/app';
+    let password = "";
+    let username = "";
+    let error;
+  
+    const handleLogin = async () => {
+      const response = await fetch("/user/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+      console.log("bali",response);
+      if (response.ok){
+        goto('/');
+      }
+    };
 </script>
 
 <main class="contents">
@@ -26,12 +45,12 @@
                         <h1 class="text-2xl">Login</h1>
                     </div>
                     <div class="content-form">
-                        <form action="">
+                        <form on:submit|preventDefault="{handleLogin}" method="post">
                             <div class="username">
-                                <input class="w-full" type="text" placeholder="username">
+                                <input class="w-full" type="text" placeholder="username" bind:value="{username}"/>
                             </div>
                             <div class="password">
-                                <input class="w-full" type="password" placeholder="username">
+                                <input class="w-full" type="password" placeholder="passowrd" bind:value="{password}">
                             </div>
                             <div class="btn">
                                 <Button Primary={true}>Submite</Button>
@@ -40,7 +59,10 @@
                     </div>
                 </div>
             </div>
-        </Card> 
+        </Card>
+        {#if error}
+        <p>{error}</p>
+        {/if} 
     </div>
 </main>
 
@@ -77,4 +99,5 @@
         position: relative;
         left: 20%;
     }
+    
 </style>

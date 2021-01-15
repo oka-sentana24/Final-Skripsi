@@ -2,7 +2,9 @@ import sirv from 'sirv';
 // import polka from 'polka';
 import compression from 'compression';
 import * as sapper from '@sapper/server';
-import express from "express"
+import express from "express";
+import { onMount } from 'svelte';
+import { goto } from '@sapper/app';
 
 const bodyParser = require('body-parser')
 const { PrismaClient } = require('@prisma/client')
@@ -27,6 +29,7 @@ app.post(`/user`, async (req, res) => {
 
 app.post(`/user/login`, async (req, res) => {
 	const data = [];
+	let status = "200";
 	const result = await prisma.user.findFirst({
 		where: {
 		  username: req.body.username,
@@ -40,8 +43,9 @@ app.post(`/user/login`, async (req, res) => {
 	}else{
 		data['message']="fail";
 		data['data'] = "";
+		status = "401";
 	}
-	res.json(data)
+	res.status(status).json(data)
 	console.log(data);
 	})
 	.use(
