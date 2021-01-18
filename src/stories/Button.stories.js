@@ -34,3 +34,11 @@ export const Success = () => ({
     text: "Success",
   },
 });
+
+export const New = () => ({
+  Component: OptionButton,
+  props: {
+    New:true,
+    text: "New",
+  },
+});

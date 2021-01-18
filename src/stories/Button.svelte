@@ -6,6 +6,7 @@
   export let Primary = false;
   export let Secondary = false;
   export let Success = false;
+  export let New = false;
   export let canClick = true;
 </script>
 
@@ -51,6 +52,10 @@
     transform: translateY(0px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
+  .New{
+    border: 1px solid black;
+    border-radius: 0px;
+  }
 
   .option {
     padding: 10px 38px;
@@ -67,6 +72,7 @@
   class:Primary
   class:Secondary
   class:Success
+  class:New
   class:canClick>
   <slot>{text}</slot>
 </button>
