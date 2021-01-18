@@ -4,6 +4,7 @@
 	// import Card from "../stories/Card.svelte";
 	// import Header from "../stories/Header.svelte";
 	// import Login from "../routes/component/_layout";
+	import Sidebar from "../components/Sidebar.svelte";
 	
 </script>
 
@@ -61,4 +62,4 @@
  -->
  <!-- <Login></Login> -->
 
- <p>shshshsshsshhshs</p>
+ <Sidebar/>

@@ -7,9 +7,8 @@
     .main {
       margin: 2rem;
       border-radius: 10px;
-      min-width: 850px;
-      max-width: 1000px;
-      height: max-content;
+      min-width:min-content;
+      max-width:max-content;
       margin-left: auto;
       margin-right: auto;
       padding: 1.5rem 1rem;
@@ -20,11 +19,13 @@
     .CardSide {
       margin-left: 0px;
       margin-right: 0px;
-      height: 100vh;
-      width: 50px;
+      min-width: 150px;
+      max-width: 250px;
+      height: 90vh;
       border: 0px;
       border-radius: 0px;
       box-shadow: rgba(32, 32, 35, 0.08) 0.25rem 0.5rem 2rem 0px;
+      margin: 0rem;
     }
   
     @media only screen and (max-width: 600px) {
