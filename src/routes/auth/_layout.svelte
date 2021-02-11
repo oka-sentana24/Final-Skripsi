@@ -5,10 +5,10 @@
 <main>
     <div class="container mx-auto">
         <Navbar Navbar={true}></Navbar>
-        {#if segment === "login"}
-            <slot></slot>
-        {/if}
     </div>
+    {#if segment === "login"}
+        <slot></slot>
+    {/if}
 </main>
 <style>
     main{

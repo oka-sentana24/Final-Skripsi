@@ -118,5 +118,5 @@ export default {
 		preserveEntrySignatures: false,
 		onwarn,
 	},
-	plugins: [json()]
+	plugins: json()
 };

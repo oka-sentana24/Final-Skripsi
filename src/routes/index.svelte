@@ -1,6 +1,7 @@
 <script>
-	import Sidebar from "../components/Sidebar.svelte";
+	import Sidebar from "../stories/Sidebar.svelte";
 	import Header from "../stories/Header.svelte";
+	import Content from "../components/Content/dasboard.svelte";
 </script>
 
 <svelte:head>
@@ -8,16 +9,15 @@
 </svelte:head>
 
 <main>
-	<!-- <div class="grid grid-rows-2 grid-flow-col gap-2">
-		<div class="row-span-3 ..."><Sidebar></Sidebar></div>
-		<div class="col-span-2 ...">2</div>
-	</div> -->
-	<Header LoginHead={true} />
-	<div class="flex">
-		<div class="flex-initial ...">
-		  <Sidebar></Sidebar>
-		</div>
-		<div class="flex-initial p-5 w-full">
-		</div>
+	<div class="w-full z-20 fixed">
+		<Header LoginHead={true}></Header>
 	</div>
+	<!-- <section class=" flex min-h-screen">
+		<div class=" flex-shrink h-screen bg-gray-100 pt-20 w-56 fixed">
+			<Sidebar></Sidebar>
+		</div>
+		<div class=" flex-shrink h-screen pt-20 w-full ml-56">
+			<Content></Content>
+		</div>
+	</section> -->
 </main>

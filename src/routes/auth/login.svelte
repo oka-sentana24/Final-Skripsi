@@ -24,291 +24,65 @@
     };
 </script>
 
-<main class="contents">
-    <img  class="background-img w-full" src={Images} alt="Background">
-    <div class="card">
-        <Card main>
-            <div class="content-login h-64 grid grid-rows-1 grid-flow-col gap-2">
-                <div>
-                    <!-- <div class="title">
-                        <h1 class="text-2xl">Forum Diskusi</h1>
-                        <h1 class="text-2xl text-blue-700">SMK NEGERI 1 GIANYAR</h1>
-                    </div> -->
-                    <img  class="logo" src={Logo} alt="Background">
-                    <div class="content text-center p-3">
-                        <h1 class='text-lg'><strong>FORUM DISKUSI</strong></h1>
-                        <h1 class='text-lg text-blue-700'><strong>SMK NEGERI 1 GIANYAR</strong></h1>
+<main class="font-mono">
+    <!-- Container -->
+    <div class="container mx-auto">
+        <div class="flex justify-center px-6 my-12">
+            <!-- Row -->
+            <div class="w-full xl:w-3/4 lg:w-11/12 flex shadow-md">
+                <!-- Col -->
+                <div
+                    class="w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg"
+                    style="background-image: url('https://lh3.googleusercontent.com/proxy/9d4nTARUclEMATDZyOqBOr4D-utRzXx30RAOgl9bRCwbTy6bkFWsagnwVjq-0jtQ4aaBs3RyV9raRHl_CML4SrG78mFOAWQ4MgcF1ygw_n35wdIVuzGh61Zk-94n1dikhuHOP1U8JGPfkHY')"
+                ></div>
+                <!-- Col -->
+                <div class="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
+                    <div class="px-8 mb-4 text-center">
+                        <h3 class="pt-4 mb-2 text-2xl">login</h3>
                     </div>
-                </div>
-                <div>
-                    <div class="login">
-                        <h1 class="text-2xl">Login</h1>
-                    </div>
-                    <div class="content-form">
-                        <form on:submit|preventDefault="{handleLogin}" method="post">
-                            <div class="username">
-                                <input class="w-full" type="text" placeholder="username" bind:value="{username}"/>
-                            </div>
-                            <div class="password">
-                                <input class="w-full" type="password" placeholder="passowrd" bind:value="{password}">
-                            </div>
-                            <div class="btn">
-                                <Button Primary={true}>Submite</Button>
-                            </div>
-                            <div class="p-5 text-center">
-                                Reset Pasword? Hubungi Pihak Sekolah
-                            </div>
-                        </form>
-                    </div>
+                    <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded-r-lg ">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
+                                Email
+                            </label>
+                            <input
+                                class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                id="email"
+                                type="email"
+                                placeholder="Enter Email Address..."
+                            />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-bold text-gray-700" for="password">
+                                Password
+                            </label>
+                            <input
+                                class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                id="email"
+                                type="email"
+                                placeholder="Enter Email Address..."
+                            />
+                        </div>
+                        <div class="mb-6 text-center">
+                            <button
+                                class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+                                type="button"
+                            >
+                                Reset Password
+                            </button>
+                        </div>
+                        <hr class="mb-6 border-t" />
+                        <div class="text-center">
+                            <a
+                                class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+                                href="./index.html"
+                            >
+                                Belum memiliki akun? Hubungi Pihak sekolah
+                            </a>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </Card>
-        {#if error}
-        <p>{error}</p>
-        {/if} 
+        </div>
     </div>
 </main>
-
-<style>
-    /* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
-    @media (min-width: 1281px) {
-        .background-img{
-        border-radius: 1.25em;
-        object-fit: cover;
-        min-height: 100px;
-        max-height: 500px;
-        background-position: center;  
-       }
-        .card{
-            position: relative;
-            display: block;
-            bottom: 300px;
-            left: 300px;
-        }
-        .username{
-            padding: 20px 0px;
-        }
-        .password{
-        padding: 20px 0px;
-        }
-        input{
-        padding: 5px;
-        border-radius: 5px;
-        border: 0.75px solid gray;
-        width:100%;
-        }
-        .logo{
-        width: 50%;
-        position: relative;
-        left: 25%;
-        }
-    
-    }
-/* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-  
-    .background-img{
-        border-radius: 1.25em;
-        object-fit: cover;
-        min-height: 100px;
-        max-height: 500px;
-        background-position: center;  
-       }
-        .card{
-            position: relative;
-            display: block;
-            bottom: 300px;
-            left: 150px;
-        }
-        .username{
-            padding: 20px 0px;
-        }
-        .password{
-        padding: 20px 0px;
-        }
-        input{
-        padding: 5px;
-        border-radius: 5px;
-        border: 0.75px solid gray;
-        width:100%;
-        }
-        .logo{
-        width: 50%;
-        position: relative;
-        left: 25%;
-        }
-  
-}
-
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  
-    .background-img{
-        border-radius: 1.25em;
-        object-fit: cover;
-        min-height: 100px;
-        max-height: 500px;
-        background-position: center;  
-       }
-        .card{
-            position: relative;
-            display: block;
-            bottom: 300px;
-            left: 150px;
-        }
-        .username{
-            padding: 20px 0px;
-        }
-        .password{
-        padding: 20px 0px;
-        }
-        input{
-        padding: 5px;
-        border-radius: 5px;
-        border: 0.75px solid gray;
-        width:100%;
-        }
-        .logo{
-        width: 50%;
-        position: relative;
-        left: 25%;
-        }
-  
-}
-
-/* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
-    .background-img{
-        border-radius: 1.25em;
-        object-fit: cover;
-        min-height: 100px;
-        max-height: 500px;
-        background-position: center;  
-       }
-        .card{
-            position: relative;
-            display: block;
-            bottom: 300px;
-            left: 33px;
-        }
-        .username{
-            padding: 20px 0px;
-        }
-        .password{
-        padding: 20px 0px;
-        }
-        input{
-        padding: 5px;
-        border-radius: 5px;
-        border: 0.75px solid gray;
-        width:100%;
-        }
-        .logo{
-        width: 50%;
-        position: relative;
-        left: 25%;
-        }
-  
-}
-
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-
-@media (min-width: 481px) and (max-width: 767px) {
-  
-    .background-img{
-        border-radius: 1.25em;
-        object-fit: cover;
-        min-height: 100px;
-        max-height: 500px;
-        background-position: center;  
-       }
-        .card{
-            position: relative;
-            display: block;
-            bottom: 300px;
-            left: 0px;
-        }
-        .username{
-            padding: 20px 0px;
-        }
-        .password{
-        padding: 20px 0px;
-        }
-        input{
-        padding: 5px;
-        border-radius: 5px;
-        border: 0.75px solid gray;
-        width:100%;
-        }
-        .logo{
-        width: 50%;
-        position: relative;
-        left: 25%;
-        }
-  
-}
-
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-
-@media (min-width: 320px) and (max-width: 480px) {
-  
-    .background-img{
-        visibility: hidden;
-       }
-    .card{
-        position: absolute;
-        display: block;
-        top :50px;
-        padding: 30px;
-    }
-    .content-login{
-        display:contents;
-    }
-    .username{
-            padding: 20px 0px;
-    }
-    .password{
-    padding: 20px 0px;
-    }
-    input{
-    padding: 5px;
-    border-radius: 5px;
-    border: 0.75px solid gray;
-    width:100%;
-    }
-    .logo{
-    width: 50%;
-    position: relative;
-    left: 25%;
-    }
-    .login{
-        padding-top: 20px;
-    }
-    .login h1{
-        text-align: center;
-    }
-}
-</style>
